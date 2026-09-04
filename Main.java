@@ -1,12 +1,21 @@
-public class Main {
+import java.util.Scanner;
+ class Main {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-        Estudiante estudiante = new Estudiante(
-                "Carlos",
-                "Ingeniería en Informática",
-                22
-        );
 
+        System.out.print("Ingrese nombre: ");
+        String nombre = scanner.nextLine();
+
+        System.out.print("Ingrese carrera: ");
+        String carrera = scanner.nextLine();
+
+        System.out.print("Ingrese edad: ");
+        int edad = scanner.nextInt();
+
+        Estudiante estudiante = new Estudiante(nombre, carrera, edad);
         estudiante.mostrarInformacion();
+
     }
 }
+
